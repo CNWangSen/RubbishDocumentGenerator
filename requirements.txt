@@ -1,0 +1,5 @@
+translate
+xpinyin
+openai
+graphviz
+docx
