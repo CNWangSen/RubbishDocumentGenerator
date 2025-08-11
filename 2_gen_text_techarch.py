@@ -6,7 +6,7 @@ import os
 
 class Gen:
 	def __init__(self):
-		self.client = OpenAI(api_key="sk-9ced44952b564ef2b185a28a419723d6", base_url="https://api.deepseek.com")
+		self.client = OpenAI(api_key="Your Deepseek API key", base_url="https://api.deepseek.com")
 		self.override=False
 	def GetPromptFromDS(self,DSprompt):
 		response = self.client.chat.completions.create(

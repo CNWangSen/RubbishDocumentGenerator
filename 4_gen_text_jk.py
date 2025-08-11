@@ -6,7 +6,7 @@ T = Translator(from_lang="ZH", to_lang="EN")
 
 class Gen:
 	def __init__(self):
-		self.client = OpenAI(api_key="sk-9ced44952b564ef2b185a28a419723d6", base_url="https://api.deepseek.com")
+		self.client = OpenAI(api_key="Your Deepseek API key", base_url="https://api.deepseek.com")
 		self.override=False
 	def GetPromptFromDS(self,DSprompt):
 		response = self.client.chat.completions.create(
@@ -36,17 +36,17 @@ class Gen:
 			pass
 	def run(self):
 		sysprompt = self.readTxt("req/system.txt")[0]
-		self.mods=["业务迁移模块",#0
-		"双机热备份模块",#1
-		"指控端安全加解密模块",#2
-		"指控端故障恢复与数据同步模块",#3
-		"指控端算法下发算力分配模块",#4
-		"指控端自协商快速接入模块",#5
-		"资源编排调度模块",#6
-		"远程设备管理模块",#7
-		"小无人机端边缘设备",#8
-		"大无人机端边缘设备",#9
-		"大无人艇端边缘设备",#10
+		self.mods=["模块1",#0
+		"模块2",#1
+		"模块3",#2
+		"模块4",#3
+		"模块5",#4
+		"模块6",#5
+		"模块7",#6
+		"模块8",#7
+		"模块9",#8
+		"模块10",#9
+		"模块11",#10
 		]
 
 		self.run_InEx([[6,3],[6,4],[6,7],[0,6],[3,1]],True)
